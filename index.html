@@ -323,7 +323,7 @@
 			            name: 'student',
 			            type: 'scatter',
 			            coordinateSystem: 'geo',
-			            symbolSize: 12,
+			            symbolSize: 9,
 			            label: {
 			                normal: {
 			                    show: false
@@ -434,19 +434,19 @@
 					data: convertScatterData(scatterVal),
 					label: {
 						normal: {
-							show: true,
+							show: false,
 							padding: [10, 20],
 							color: '#fff',
 							areaColor: '#4ed5a4',
 							background_color: '#00A2FF',
-							borderRadius: 6,
+							borderRadius: 12,
 							formatter: '{b}'
 						},
 						emphasis: {
 							show: true
 						}
 					},
-					symbolSize: 1
+					symbolSize: 3
 				});
 				seriesData.push({
 					type: 'lines',
@@ -455,7 +455,7 @@
 					color: '#ff8003',
 					opacity: 1,
 					label: {
-						show: true,
+						show: false,
 						padding: [10, 20],
 						color: '#fff',
 						background_color: '#00A2FF',
@@ -473,7 +473,7 @@
 				});
 				var lineMapOpt = {
 					title: {
-						text: '成都分布图',
+						text: '导线示意图',
 						x: 'center',
 						textStyle: {
 							color: '#fff'
@@ -496,12 +496,17 @@
 								show: false
 							}
 						},
-						zoom: 1,
-						itemStyle: {
-							normal: {
-								areaColor: 'lightskyblue'
-							}
-						}
+						zoom: 0.8,
+				        itemStyle: {
+				            normal: {
+				                areaColor: '#101f32',
+				                borderWidth: 1.1,
+				                borderColor: '#43d0d6'
+				            },
+				            emphasis: {
+				                areaColor: '#069'
+				            }
+				        }
 					},
 					series: seriesData
 				}
