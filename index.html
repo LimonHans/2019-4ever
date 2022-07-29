@@ -28,16 +28,26 @@
 						</div>
 						<div class="xpanel-wrapper xpanel-wrapper-2">
 							<div class="xpanel">
-								<!-- 地图散点 -->
-								<div class="fill-h" id="scatterMap"></div>
+								<!-- 地图导引线 -->
+								<!-- <div class="fill-h" id="lineMap"></div> -->
+								<marquee direction="up" scrollamount="5" width=100% height=100%><font color="white"><b>
+									马骁睿   西南交通大学<br/>张欣然   西南交通大学<br/>杨士一飞   河海大学<br/>彭思雨   沈阳药科大学<br/>向奕铮   成都信息工程大学<br/>
+									彭春林   四川大学<br/>侯智航   电子科技大学<br/>胡宇轩   华中师范大学<br/>潘建宇   四川大学<br/>陈欣雨   四川大学<br/>
+									高鑫远   西南医科大学<br/>袁点   电子科技大学<br/>欧阳増熹   浙江工业大学<br/>杨瑞豪   苏州大学<br/>任唯   西南医科大学<br/>
+									马心怡   海南大学<br/>王汝月   西南财经大学<br/>周稞鑫   兰州大学<br/>谢鸿天   天津理工大学<br/>郑琴芳   西华师范大学<br/>
+									罗雅月   南京航空航天大学<br/>冯天卜   天津工业大学<br/>吴计儒   川北医学院<br/>柯秋成   南开大学<br/>骆益辉   天津工业大学<br/>
+									谢淳淳   中国政法大学<br/>鲜仕轶   太原理工大学<br/>胡文慧   中国农业大学<br/>徐静   天津大学<br/>何钧源   华东理工大学<br/>
+									廖思齐   西交利物浦大学<br/>张煦   电子科技大学<br/>刘易恺   四川大学<br/>叶孟松   四川大学<br/>杨继一   电子科技大学<br/>
+									张奥琦   重庆医科大学<br/>余博   苏州大学<br/>李张川   中国人民警察大学
+								</b></font></marquee>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-6 fill-h">
 						<div class="xpanel-wrapper xpanel-wrapper-1">
 							<div class="xpanel">
-								<!-- 地图导引线 -->
-								<div class="fill-h" id="lineMap"></div>
+								<!-- 地图散点 -->
+								<div class="fill-h" id="scatterMap"></div>
 							</div>
 						</div>
 					</div>
@@ -323,7 +333,7 @@
 			            name: 'student',
 			            type: 'scatter',
 			            coordinateSystem: 'geo',
-			            symbolSize: 9,
+			            symbolSize: 12,
 			            label: {
 			                normal: {
 			                    show: false
@@ -397,10 +407,10 @@
 				        }
 				    },
 				    series: [{
-			            name: 'PM2.5',
+			            name: 'scatter',
 			            type: 'scatter',
 			            coordinateSystem: 'geo',
-			            symbolSize: 12,
+			            symbolSize: 9,
 			            label: {
 			                normal: {
 			                    show: false
@@ -424,7 +434,7 @@
 
 				/******************* 引导地图 ******************/
 				//初始化echarts实例
-				const lineMap = echarts.init(document.getElementById('lineMap'));
+				/*const lineMap = echarts.init(document.getElementById('lineMap'));
 
 				var seriesData = [];
 				seriesData.push({
@@ -468,7 +478,7 @@
 						color: '#fff'
 					},
 					data: [
-						{name: 'test', value: 'smalltest', coords:[[103.993214, 30.770399], [116.669141, 39.537844]]}
+						{name: 'test', value: [103.9, 30.7, '侯智航'], coords:[[103.993214, 30.770399], [116.669141, 39.537844]]}
 					]
 				});
 				var lineMapOpt = {
@@ -510,7 +520,7 @@
 					},
 					series: seriesData
 				}
-				lineMap.setOption(lineMapOpt);
+				lineMap.setOption(lineMapOpt);*/
 				/********** 浏览器窗口改变时，重置报表大小 ****************/
 				window.onresize = function() {
 					flyMap.resize();
